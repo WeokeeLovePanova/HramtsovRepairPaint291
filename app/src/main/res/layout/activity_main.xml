@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F2F"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ЗАГОЛОВОК С ЧАСАМИ -->
+        <TextView
+            android:id="@+id/tvClock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0F0F0F"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="-- : --"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <!-- КНОПКИ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnCreateRepair"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#E4DFDF"
+                android:text="СОЗДАТЬ ЗАЯВКУ"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#ABA3A3"
+                android:textColorLink="#CECECE"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnStats"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="#FFF7F7"
+                android:backgroundTint="@null"
+                android:text="СТАТИСТИКА"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCreatePaint"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="#FFF1F1"
+                android:backgroundTint="#C37676"
+                android:text="ИСТОРИЯ"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ==== ЗАЯВКИ ==== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Заявки на РЕМОНТ"
+                android:textColor="#ECECEC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnSortAZRepair"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Сортировка_заявок_по_алфавиту"
+                android:src="@android:drawable/ic_menu_sort_alphabetically"
+                android:tooltipText="Сортировка_заявок_по_алфавиту"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/btnSortDateRepair"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Сортировка_заявок_по_дате"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:tooltipText="Сортировка_заявок_по_дате"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+        <!-- Заголовок таблицы РЕМОНТА -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Номер"
+                    android:textColor="#ECECEC"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Дата"
+                    android:textColor="#ECECEC"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Время"
+                    android:textColor="#ECECEC"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Статус"
+                    android:textColor="#ECECEC"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="Действие"
+                    android:textColor="#ECECEC"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Список таблицы РЕМОНТА -->
+        <TableLayout
+            android:id="@+id/tableRepair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="#101010"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>
